@@ -194,18 +194,18 @@ class Composer {
     }, ...fns)
   }
 
-  static entityText (entityType, predicate, ...fns) {
+  static entityText (entityType, triggers, ...fns) {
     if (fns.length === 0) {
-      return Array.isArray(predicate)
-        ? Composer.entity(entityType, ...predicate)
-        : Composer.entity(entityType, predicate)
+      return Array.isArray(triggers)
+        ? Composer.entity(entityType, ...triggers)
+        : Composer.entity(entityType, triggers)
     }
-    const triggers = normalizeTriggers(predicate)
+    const normalizedTriggers = normalizeTriggers(triggers)
     return Composer.entity(({ type }, value, ctx) => {
       if (type !== entityType) {
         return false
       }
-      for (const trigger of triggers) {
+      for (const trigger of normalizedTriggers) {
         ctx.match = trigger(value, ctx)
         if (ctx.match) {
           return true
