@@ -201,7 +201,7 @@ export declare class Composer<TContext extends TelegrafContext>
   ): MiddlewareFn<TContext>
 
   static catch<TContext extends TelegrafContext>(
-    errorHandler: (error: Error, ctx: TContext) => any,
+    errorHandler: (error: Error, ctx: TContext) => void,
     ...middlewares: ReadonlyArray<Middleware<TContext>>
   ): MiddlewareFn<TContext>
 
