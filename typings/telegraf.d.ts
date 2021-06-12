@@ -79,6 +79,11 @@ export interface LaunchWebhookOptions {
   tlsOptions?: TlsOptions | null
 
   /**
+   * Options passed to setWebhook
+   */
+  setWebhookOptions?: tt.ExtraSetWebhook
+
+  /**
    * A callback function suitable for the http[s].createServer() method to handle a request.
    */
   cb?: (req: IncomingMessage, res: ServerResponse) => void
