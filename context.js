@@ -121,6 +121,10 @@ class TelegrafContext {
     return this.update.poll_answer
   }
 
+  get myChatMember () {
+    return this.update.my_chat_member
+  }
+
   get chat () {
     return (this.message && this.message.chat) ||
       (this.editedMessage && this.editedMessage.chat) ||
