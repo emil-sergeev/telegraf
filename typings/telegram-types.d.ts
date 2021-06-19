@@ -33,7 +33,8 @@ export type UpdateType =
   'pre_checkout_query' |
   'shipping_query' |
   'poll' |
-  'poll_answer'
+  'poll_answer' |
+  'my_chat_member'
 
 export type MessageSubTypes =
   'voice' |
