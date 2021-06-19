@@ -9,7 +9,8 @@ const UpdateTypes = [
   'pre_checkout_query',
   'message',
   'poll',
-  'poll_answer'
+  'poll_answer',
+  'my_chat_member'
 ]
 
 const MessageSubTypes = [
