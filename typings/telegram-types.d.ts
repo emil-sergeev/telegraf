@@ -34,7 +34,8 @@ export type UpdateType =
   'shipping_query' |
   'poll' |
   'poll_answer' |
-  'my_chat_member'
+  'my_chat_member' |
+  'chat_member'
 
 export type MessageSubTypes =
   'voice' |

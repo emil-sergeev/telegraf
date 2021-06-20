@@ -10,7 +10,8 @@ const UpdateTypes = [
   'message',
   'poll',
   'poll_answer',
-  'my_chat_member'
+  'my_chat_member',
+  'chat_member'
 ]
 
 const MessageSubTypes = [
@@ -125,6 +126,9 @@ class TelegrafContext {
     return this.update.my_chat_member
   }
 
+  get chatMember () {
+    return this.update.chat_member
+  }
   get chat () {
     return (this.message && this.message.chat) ||
       (this.editedMessage && this.editedMessage.chat) ||
