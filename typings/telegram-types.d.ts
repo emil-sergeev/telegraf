@@ -665,8 +665,8 @@ export type Update = TT.Update.CallbackQueryUpdate
   & TT.Update.PollAnswerUpdate
   & TT.Update.PollUpdate
   & TT.Update.ShippingQueryUpdate
-  & TT.Update.MyChatMember
-  & TT.Update.ChatMember
+  & TT.Update.MyChatMemberUpdate
+  & TT.Update.ChatMemberUpdate
 
 export interface CallbackQuery extends TT.CallbackQuery.DataCallbackQuery, TT.CallbackQuery.GameShortGameCallbackQuery {
   message: Message
